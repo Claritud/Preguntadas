@@ -1,18 +1,27 @@
 
+/*FUENTES DESCARGADAS*/
+
+@font-face {
+    font-family: "adventure";
+    src: url("../../fonts/adventure/Adventure.otf");
+    // src: url("../../fonts/adventure/AdventureHollow.otf");
+}
+
+
 /*FONTS*/
 
-$title-font:"Indie Flower", cursive;
-$main-font:"IBM Plex Mono", monospace;
+$title-font: "adventure";
+// $main-font:"IBM Plex Mono", monospace;
 
-$title-font-size: 50px;
-$main-font-size:14px;
 
 /*FONTS SIZE*/
 
+$title-font-size: 180px;
 
 /*COLORS*/
 
-$main-color: black;
+$border-color: #000000;
+$background-header-color: #c052ff;
 
 
 /*MEDIA QUERIES*/

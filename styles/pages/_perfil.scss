@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+#perfil-container {
+    display: flex;
+    flex-direction: column;
+
+    .fondo {
+        width: 100%;
+        height: 900px;
+        background-image: url(../../img/Puntos_Amarillo_fondo.png);
+        background-position: center;
+        background-size: cover;
+        margin-top: 35px;
+        border: 5px solid $border-color;
+    }
+    .burbuja {
+        width: 100px;
+        height: 100px;
+        
+    }
+}
