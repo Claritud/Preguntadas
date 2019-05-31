@@ -6,12 +6,16 @@
     src: url("../../fonts/adventure/Adventure.otf");
     // src: url("../../fonts/adventure/AdventureHollow.otf");
 }
+@font-face {
+    font-family: "para burbujas";
+    src: url("../../fonts/shaka_pow/Shaka\ Pow.ttf");
+}
 
 
 /*FONTS*/
 
 $title-font: "adventure";
-// $main-font:"IBM Plex Mono", monospace;
+$bubble-font:"para burbujas";
 
 
 /*FONTS SIZE*/

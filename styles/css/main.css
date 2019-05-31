@@ -343,6 +343,10 @@ template {
   font-family: "adventure";
   src: url("../../fonts/adventure/Adventure.otf");
 }
+@font-face {
+  font-family: "para burbujas";
+  src: url("../../fonts/shaka_pow/Shaka Pow.ttf");
+}
 /*FONTS*/
 /*FONTS SIZE*/
 /*COLORS*/
@@ -354,7 +358,7 @@ body {
 
 #perfil-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 #perfil-container .fondo {
   width: 100%;
@@ -365,6 +369,42 @@ body {
   margin-top: 35px;
   border: 5px solid #000000;
 }
+#perfil-container .columns .columna-izquierda {
+  display: flex;
+  width: 25%;
+  background-color: #fdff70;
+}
+#perfil-container .columns .columna-central {
+  width: 50%;
+}
+#perfil-container .columns .columna-derecha {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+#perfil-container .columns .columna-derecha .burbujas-seguidores .numero-siguiendo {
+  position: absolute;
+  font-family: "para burbujas";
+  font-size: 20px;
+}
+#perfil-container .columns .columna-derecha .burbujas-seguidores h3 {
+  position: absolute;
+  font-family: "para burbujas";
+  font-size: 20px;
+}
+#perfil-container .columns .columna-derecha .burbujas-seguidores .img-siguiendo {
+  width: 350px;
+  position: relative;
+}
+#perfil-container .columns .columna-derecha .burbujas-seguidores .img-te-siguen {
+  width: 350px;
+  position: relative;
+}
+#perfil-container .burbuja {
+  width: 50px;
+  height: 50px;
+}
+
 /*COMPONENTS*/
 /*LAYOUT*/
 /*------------HEADER-------------------*/

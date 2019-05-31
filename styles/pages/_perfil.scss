@@ -4,8 +4,8 @@ body {
 
 #perfil-container {
     display: flex;
-    flex-direction: column;
-
+    flex-direction: row;
+    
     .fondo {
         width: 100%;
         height: 900px;
@@ -15,9 +15,95 @@ body {
         margin-top: 35px;
         border: 5px solid $border-color;
     }
-    .burbuja {
-        width: 100px;
-        height: 100px;
-        
+    .columns {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .columna-izquierda {
+            display: flex;
+            width: 25%;
+            background-color: #fdff70;
+            #nombre-usuario {
+                font-family: $bubble-font;
+                font-size: 30px;
+                color: $border-color;
+                text-shadow: 6px 9px 0 $border-color;
+            }
+            .img-puntaje-usuario {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            #puntaje-usuario {
+                position: absolute;
+                font-family: $bubble-font;
+                font-size: 30px;
+                color: $border-color;
+                text-shadow: 6px 9px 0 $border-color;
+
+            }
+
+            .contenedor-nivel { // aca es donde esta el numero del nivel
+                position: relative;
+                width: 200px;
+                height: 50px;
+                background-color: white;
+                border: 2px solid $border-color; 
+                #nivel-usuario {
+                    position: absolute;
+                    color: $border-color;
+                    text-shadow: 6px 9px 0 $border-color;
+                    font-size: 20px
+                }
+
+            }
+
+        }
+
+        .columna-central {
+            width: 50%
+
+
+        }
+        .columna-derecha {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            .burbujas-seguidores {
+                .numero-siguiendo{
+                    position: absolute;
+                    font-family: $bubble-font;
+                    font-size: 20px;
+                }
+
+                h3 {
+                    position: absolute;
+                    font-family: $bubble-font;
+                    font-size: 20px;
+                }
+
+                .img-siguiendo {
+                    width: 350px;
+                    position: relative;
+                }
+                .img-te-siguen {
+                    width: 350px;
+                    position: relative;
+                }
+
+            }
+
+
+        }
+
     }
+
+
+    .burbuja {
+        width: 50px;
+        height: 50px;
+
+    }
+
 }
