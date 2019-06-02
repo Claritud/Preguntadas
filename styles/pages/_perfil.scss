@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
 }
@@ -8,88 +9,162 @@ body {
     
     .fondo {
         width: 100%;
-        height: 900px;
-        background-image: url(../../img/Puntos_Amarillo_fondo.png);
+        height: auto;
+        background-image: url(../../img/fondosNiveles/nivel1.png);
         background-position: center;
         background-size: cover;
-        margin-top: 35px;
+        margin-top: 20px;
         border: 5px solid $border-color;
     }
+
+
     .columns {
         width: 100%;
+        height: auto;
         display: flex;
         flex-direction: row;
 
         .columna-izquierda {
             display: flex;
-            width: 25%;
-            background-color: #fdff70;
-            #nombre-usuario {
-                font-family: $bubble-font;
-                font-size: 30px;
-                color: $border-color;
-                text-shadow: 6px 9px 0 $border-color;
-            }
-            .img-puntaje-usuario {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-            #puntaje-usuario {
-                position: absolute;
-                font-family: $bubble-font;
-                font-size: 30px;
-                color: $border-color;
-                text-shadow: 6px 9px 0 $border-color;
+            width: 15%;
+            background-color: #fede2c;
+            border-right: 6px solid $border-color;
+     
+        }
 
-            }
+            // NOMBRE USUARIO/PUNTAJE/NIVEL
+        .columna-central {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
 
-            .contenedor-nivel { // aca es donde esta el numero del nivel
+            .datos-usuario {
                 position: relative;
-                width: 200px;
-                height: 50px;
-                background-color: white;
-                border: 2px solid $border-color; 
-                #nivel-usuario {
-                    position: absolute;
+                top: -55px;
+                transform: skewy(-7deg);
+
+                #nombre-usuario {
+                    margin: 0;
+                    padding: 40px 10px 1px 10px;
+                    font-family: $title-font;
+                    font-size: 120px;
                     color: $border-color;
-                    text-shadow: 6px 9px 0 $border-color;
-                    font-size: 20px
+                    background-image: url(../../img/fondosNiveles/fondoNombre.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    text-shadow: 10px 5px 0 #93939369;
+                    border-bottom: 8px solid $border-color;
+                    border-top: 8px solid $border-color;
+                    border-right: 8px solid $border-color;
                 }
 
+                .img-puntaje-usuario {
+                    width: 300px;
+                    height: auto;
+                    position: absolute;
+                    transform: translate(410px, -160px);
+
+                }
+
+                #puntaje-usuario {
+                    position: absolute;
+                    font-family: $bubble-font;
+                    font-size: 30px;
+                    color: $border-color;
+                    text-shadow: 3px 3px 0 #0000005e;
+                    transform: translate(415%,-290%);
+                    z-index: 1;
+                }
+
+                .contenedor-nivel { // aca es donde esta el numero del nivel
+                    position: absolute;
+                    transform: translateY(-38%);
+                    left: 40%;
+                    width: 160px;
+                    height: 45px;
+                    background-color: white;
+                    border: 2px solid $border-color; 
+    
+                    #nivel-usuario {
+                        font-family: $bubble-font;
+                        position: absolute;
+                        margin: 5px;
+                        color: $border-color;
+                        text-shadow: 3px 2px 0 #00000038;
+                        font-size: 30px;
+                    }
+                    
+                }
+                
             }
 
-        }
-
-        .columna-central {
-            width: 50%
-
 
         }
+
         .columna-derecha {
             width: 25%;
             display: flex;
             flex-direction: column;
+
             .burbujas-seguidores {
-                .numero-siguiendo{
+                position: relative;
+                height: 250px;
+
+                .numero-seguidores{
                     position: absolute;
                     font-family: $bubble-font;
-                    font-size: 20px;
+                    font-size: 45px;
+                    transform: translate(600%, 185%);
+                    z-index: 1;
+                    text-shadow: 3px 1px 0 #8080807a;
                 }
 
                 h3 {
                     position: absolute;
                     font-family: $bubble-font;
-                    font-size: 20px;
+                    font-size: 45px;
+                    transform: translate(42%, 200%);
+                    z-index: 1;
+                    text-shadow: 6px -5px 0 #8080807a;
+                }
+
+                .img-te-siguen {
+                    width: 98%;
+                    position: absolute;
+                }
+
+            }
+
+            .burbujas-seguidos {
+                position: relative;
+                width: 100%;
+                height: auto;
+                background-image: url(../../img/Clara/1024x1024/clean\ -\ 7.png);
+                background-position: center;
+                background-size: cover;
+
+                .numero-que-sigues{
+                    position: absolute;
+                    font-family: $bubble-font;
+                    font-size: 45px;
+                    transform: translate(600%, 185%);
+                    z-index: 1;
+                    text-shadow: 3px 1px 0 #8080807a;
+                }
+
+                h3 {
+                    position: absolute;
+                    font-family: $bubble-font;
+                    font-size: 45px;
+                    transform: translate(42%, 200%);
+                    z-index: 1;
+                    text-shadow: 6px -5px 0 #8080807a;
                 }
 
                 .img-siguiendo {
-                    width: 350px;
-                    position: relative;
-                }
-                .img-te-siguen {
-                    width: 350px;
-                    position: relative;
+                    width: 98%;
+                    position: absolute;
                 }
 
             }
@@ -97,13 +172,9 @@ body {
 
         }
 
-    }
-
-
-    .burbuja {
-        width: 50px;
-        height: 50px;
 
     }
+
+
 
 }

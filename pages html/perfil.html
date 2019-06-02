@@ -4,8 +4,6 @@
 <head>
     <title>SuperAdas</title>
     <meta charset="utf-8">
-    <!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -16,8 +14,10 @@
     <div id="perfil">
         <!-- ---------------------HEADER------------------ -->
         <header>
-            <div id="notificaciones">
+            <div id="notificaciones" onclick="mostrarNotificacionesActualizadas()">
                 <i class="fas fa-exclamation-circle"></i>
+                <div class="lista-notificaciones" id="notificaciones-actualizadas">
+                </div>
             </div>
             <div class="logotipo">
                 <div class="contenedor-imagen"></div>
@@ -28,23 +28,37 @@
         <div id="perfil-container">
             <div class="fondo">
                 <div class="columns">
-                    <aside class="columna-izquierda"></aside>
-                    <main class="columna-central">
-                        <h2 id="nombre-usuario">Alberta</h2>
-                        <img class="img-puntaje-usuario" src="../img/Clara/1024x1024/clean - 6.png" />
-                        <h2 id="puntaje-usuario">0 puntos</h2>
-                        <div class="contenedor-nivel">
-                            <h2 id="nivel-usuario">Nivel 1</h2>
+                    <aside class="columna-izquierda">
+                        <!-- LOG OUT aca tambien tendria que borrar los datos del login-->
+                        <div class="boton-logout">
+                            <a href="login.html">
+                                <h2>Log Out</h2>
+                            </a>
                         </div>
+                    </aside>
+                    <main class="columna-central">
+                        <!-- NOMBRE USUARIO/PUNTAJE/NIVEL -->
+                        <div class="datos-usuario">
+                            <h2 id="nombre-usuario">Alberta</h2>
+                            <img class="img-puntaje-usuario" src="../img/Clara/1024x1024/clean - 6.png" />
+                            <h2 id="puntaje-usuario">124 puntos</h2>
+                            <div class="contenedor-nivel">
+                                <h2 id="nivel-usuario">Nivel 1</h2>
+                            </div>
+                        </div>
+
                     </main>
                     <aside class="columna-derecha">
+                        <!-- SEGUIDORES/SEGUIDOS-->
                         <div class="burbujas-seguidores">
-                            <div class="numero-siguiendo">0</div>
+                            <div class="numero-seguidores">0</div>
                             <h3>Te Siguen</h3>
-                            <img class="img-siguiendo" src="../img/Clara/1024x1024/clean - 7.png" />
-                        </div>
-                        <div class="burbujas-seguidores">
                             <img class="img-te-siguen" src="../img/Clara/1024x1024/clean - 7.png" />
+                        </div>
+                        <div class="burbujas-seguidos">
+                            <div class="numero-que-sigues">0</div>
+                            <h3>Siguiendo</h3>
+                            <!-- <img class="img-siguiendo" src="../img/Clara/1024x1024/clean - 7.png" /> -->
                         </div>
                     </aside>
                 </div>
@@ -55,14 +69,7 @@
     <footer>
         <!-- <a href="https://www.freepik.com/free-photos-vectors/template">Template vector created by starline - www.freepik.com</a> -->
     </footer>
-
+    <script src="../JS/perfil.js" type="text/javascript"></script>
 </body>
-<script src="../JS/perfil.js" type="text/javascript"></script>
 
 </html>
-
-<!-- <div class="burbuja">
-                    <a>
-                        <img src="../img/Clara/1024x1024/1 - dots.png"/>
-                    </a>
-                </div> -->

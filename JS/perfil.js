@@ -1,5 +1,29 @@
 
 
+// NOTIFICACIONES
+// aca deberia catuilizar diferentes cosas
+// parametros function(cambios de nivel, invitaciones, nuevos segudores, cambios en ranking)
+
+const actualizarNotificaciones = function() { 
+    let notificaciones = [
+        "Te sigue Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        "Invitacion a Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        "Tu puesto en el ranking Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        "Pasaste al nivel Lorem ipsum dolor sit amet consectetur adipisicing elit"
+    ]
+    return notificaciones;
+
+}
+
+const mostrarNotificacionesActualizadas = function(){
+    notificaciones = actualizarNotificaciones();
+    let contenedorNotificaciones = document.getElementById("notificaciones-actualizadas");
+    contenedorNotificaciones.classList.toggle("lista-notificaciones");
+
+    for (i=0; i < notificaciones.length; i++) {
+        contenedorNotificaciones.innerHTML += `</br> * ${notificaciones[i]}`;//que pedo suma mil
+    }
+}
 
 
 // ---------nombre usuario
@@ -41,7 +65,7 @@ const actualizarNivel = function(){
         parametroPuntaje+=100;
     }
    return nivel, parametroPuntaje;
-    
+
   //aca tengo que poner que segun el puntaje que tenga pase de nivel
 }
 console.log(nivel);
@@ -83,20 +107,21 @@ const mostrarSeguidosActualizados = function() {
 }
 
 
-// NOTIFICACIONES
-
-const actualizarNotificaciones = function() {
-
-}
-
-const mostrarNotificacionesActualizadas = function(){
-
-}
 
 // DESLOGUEARSE
 
 const desloguarse = function(){
 
+     // Lo que tiene que hacer es perder los datos del login como?????
+
+    //aca tiene que volver a la pagina de login eso ya lo hac eocn el click porque tiene una ruta relativa
+   
+
+}
+
+const cambiarFondo = function(){
+    // aca el fondo va cambiando acaorde a el nivel que hay 
+    // nivel${i}.png
 }
 
 
