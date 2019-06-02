@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: row;
     
-    .fondo {
+    #fondo {
         width: 100%;
         height: auto;
         background-image: url(../../img/fondosNiveles/nivel1.png);
@@ -26,15 +26,16 @@ body {
 
         .columna-izquierda {
             display: flex;
-            width: 15%;
-            background-color: #fede2c;
+            width: 20%;
+            background-color: white;
             border-right: 6px solid $border-color;
+            box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
      
         }
 
             // NOMBRE USUARIO/PUNTAJE/NIVEL
         .columna-central {
-            width: 55%;
+            width: 60%;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -43,6 +44,7 @@ body {
                 position: relative;
                 top: -55px;
                 transform: skewy(-7deg);
+                box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
 
                 #nombre-usuario {
                     margin: 0;
@@ -73,18 +75,19 @@ body {
                     font-size: 30px;
                     color: $border-color;
                     text-shadow: 3px 3px 0 #0000005e;
-                    transform: translate(415%,-290%);
+                    transform: translate(374%,-270%);
                     z-index: 1;
                 }
 
                 .contenedor-nivel { // aca es donde esta el numero del nivel
                     position: absolute;
                     transform: translateY(-38%);
-                    left: 40%;
+                    left: 30%;
                     width: 160px;
                     height: 45px;
                     background-color: white;
                     border: 2px solid $border-color; 
+                    box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
     
                     #nivel-usuario {
                         font-family: $bubble-font;
@@ -94,7 +97,7 @@ body {
                         text-shadow: 3px 2px 0 #00000038;
                         font-size: 30px;
                     }
-                    
+
                 }
                 
             }
@@ -102,71 +105,180 @@ body {
 
         }
 
+
         .columna-derecha {
-            width: 25%;
             display: flex;
-            flex-direction: column;
+            width: 20%;
+            height: 500px;
+            padding-left: 20px;
+            background-color: white;
+            border-left: 6px solid $border-color;
+            box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
+
+            .contenedor-burbujas {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 500px;
+                background-color: #1cc763;
+                border-left: 6px solid $border-color;
+            }
 
             .burbujas-seguidores {
                 position: relative;
                 height: 250px;
+                cursor: pointer;
 
                 .numero-seguidores{
                     position: absolute;
+                    top: 20%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
                     font-family: $bubble-font;
-                    font-size: 45px;
-                    transform: translate(600%, 185%);
+                    font-size: 35px;
                     z-index: 1;
-                    text-shadow: 3px 1px 0 #8080807a;
+                    text-shadow: 4px 4px 0 #8080807a;
                 }
 
                 h3 {
                     position: absolute;
+                    top: 28%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
                     font-family: $bubble-font;
-                    font-size: 45px;
-                    transform: translate(42%, 200%);
+                    font-size: 25px;
                     z-index: 1;
-                    text-shadow: 6px -5px 0 #8080807a;
+                    text-shadow: 4px 4px 0 #8080807a;
                 }
 
                 .img-te-siguen {
-                    width: 98%;
+                    width: 75%;
                     position: absolute;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
                 }
 
             }
 
-            .burbujas-seguidos {
+            .contenedor-seguidores {
+                padding: 20px 40px;
+                position: fixed;
+                z-index: 2;
+                background-color: white;
+                background-image: url(../../img/fondosNiveles/fondoSeguidores.png);
+                background-position: center;
+                background-size: cover;
+                -webkit-box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
+                box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
+                border: 5px solid $border-color;
+                opacity: 0;
+                top: 0%;
+                transition: .5s;
+
+                .cerrar {
+                    float: right;
+                    margin-left: 45px;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+        
+            }
+            .contenedor-seguidores {
+                font-family: $bubble-font;
+                color: $border-color;
+                font-size: 20px;
+                margin: 0px 80px 13px 0px;
+                text-align: left;
+            }
+
+            .seguidores-visible {
+                opacity: 1;
+                top: 20%;
+                left: 50%;
+                visibility: visible;
+            }
+
+        
+
+
+
+            .burbujas-siguiendo {
                 position: relative;
                 width: 100%;
                 height: auto;
-                background-image: url(../../img/Clara/1024x1024/clean\ -\ 7.png);
-                background-position: center;
-                background-size: cover;
+                cursor: pointer;
 
                 .numero-que-sigues{
                     position: absolute;
+                    top: 10%;
+                    left: 50%;
+                    transform: translate(-50%,-80%);
                     font-family: $bubble-font;
-                    font-size: 45px;
-                    transform: translate(600%, 185%);
+                    font-size: 35px;
                     z-index: 1;
-                    text-shadow: 3px 1px 0 #8080807a;
+                    text-shadow: 4px 4px 0 #8080807a;
                 }
 
                 h3 {
                     position: absolute;
+                    top: 28%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
                     font-family: $bubble-font;
-                    font-size: 45px;
-                    transform: translate(42%, 200%);
+                    font-size: 25px;
                     z-index: 1;
-                    text-shadow: 6px -5px 0 #8080807a;
+                    text-shadow: 4px 4px 0 #8080807a;
                 }
 
                 .img-siguiendo {
-                    width: 98%;
+                    width: 75%;
                     position: absolute;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
                 }
 
+            }
+
+            .contenedor-siguiendo {
+                padding: 20px 40px;
+                position: fixed;
+                z-index: 2;
+                background-color: white;
+                background-image: url(../../img/fondosNiveles/fondoSiguiendo.png);
+                background-position: center;
+                background-size: cover;
+                -webkit-box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
+                box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
+                border: 5px solid $border-color;
+                opacity: 0;
+                top: 0%;
+                transition: .5s;
+
+                .cerrar {
+                    float: right;
+                    margin-left: 45px;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+        
+            }
+            .contenedor-siguiendo {
+                font-family: $bubble-font;
+                color: $border-color;
+                font-size: 20px;
+                margin: 0px 80px 13px 0px;
+                text-align: left;
+            }
+
+            .siguiendo-visible {
+                opacity: 1;
+                top: 20%;
+                left: 50%;
+                visibility: visible;
             }
 
 

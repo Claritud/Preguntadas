@@ -1,8 +1,11 @@
 
 
-// NOTIFICACIONES
+//--------------------------- NOTIFICACIONES
+
 // aca deberia catuilizar diferentes cosas
 // parametros function(cambios de nivel, invitaciones, nuevos segudores, cambios en ranking)
+//ver aca porque sigue sumando todaslas notificaciones
+//ver is hago tipo notificcacionesAnteriores !== nuevasNotificaciones o algo asi
 
 const actualizarNotificaciones = function() { 
     let notificaciones = [
@@ -21,13 +24,15 @@ const mostrarNotificacionesActualizadas = function(){
     contenedorNotificaciones.classList.toggle("lista-notificaciones");
 
     for (i=0; i < notificaciones.length; i++) {
-        contenedorNotificaciones.innerHTML += `</br> * ${notificaciones[i]}`;//que pedo suma mil
+        contenedorNotificaciones.innerHTML += ` 💬 ${notificaciones[i]} </br>`;
     }
 }
 
 
-// ---------nombre usuario
+// ---------------------------NOMBRE USUARIO
+
 const nombreUsuario = function() {
+    //obtenido del login
 
 }
 
@@ -39,7 +44,8 @@ const mostrarNombreUsuario = function() {
 
 // puntaje tal vez aca iria otra funcion que seria la de las preguntas y el puntaje
 //que generan las respuestas
-//---------------------Puntaje/Nivel
+//-----------------------------PUNTAJE/NIVEL
+
 let puntaje = 0;
 
 const actualizarPuntaje = function() {
@@ -52,7 +58,7 @@ const mostrarPuntajeActualizado = function() {
     //aca faltaria ver donde se muestra
 }
 
-// -----------------------nivel
+// -----------------------NIVEL
 // casda vez que termina una pregunta se tiene uqe actualizar el puntaje y el nivel 
 
 let nivel = 0;
@@ -86,40 +92,89 @@ const mostrarNivelActualizado = function(){
 }
 
 
-// SEGUIDORES
+// ------------------------------SEGUIDORES
 
 const actualizarSeguidores = function() {
+    let misSeguidores = [
+        "Albertita",
+        "Albertota",
+        "Albertuta",
+        "Albertulota"
+    ]
+    return misSeguidores;
+}
+
+const mostrarNumeroSeguidores = function(){
+    misSeguidores = actualizarSeguidores();
+    let numeroSeguidores = document.getElementById("num-seguidores");
+    numeroSeguidores.innerHTML = misSeguidores.length;
+    console.log(misSeguidores.length);
+}
+
+const mostrarSeguidores = function() {
+    misSeguidores = actualizarSeguidores();
+    let contenedorSeguidores = document.getElementById("popup-seguidores");
+    contenedorSeguidores.classList.add("seguidores-visible");
+
+    for (i=0; i < misSeguidores.length; i++) {
+        contenedorSeguidores.innerHTML += ` 💭 ${misSeguidores[i]} </br>`;
+    }  
+}
+
+const ocultarSeguidores = function(){
+    let contenedorSeguidores = document.getElementById("popup-seguidores");
+    contenedorSeguidores.classList.remove("seguidores-visible");
+}
+
+// ---------------------------------SIGUIENDO
+
+const actualizarSiguiendo = function() {
+    let aQuienSigo = [
+        "Josefa",
+        "Josefita",
+        "Josefota",
+        "Joseluta"
+    ]
+    return aQuienSigo;
+}
+
+const mostrarNumeroSiguiendo = function(){
 
 }
 
-const mostrarSeguidoresActualizados = function() {
+const mostrarSiguiendo = function() {
+    aQuienSigo = actualizarSiguiendo();
+    let contenedorSiguiendo = document.getElementById("popup-siguiendo");
+    contenedorSiguiendo.classList.add("siguiendo-visible");
+
+    for (i=0; i < aQuienSigo.length; i++) {
+        contenedorSiguiendo.innerHTML += ` 🗯️ ${aQuienSigo[i]} </br>`;
+    } 
 
 }
 
-// SEGUIDOS
-
-const actualizarSeguidos = function() {
-
+const ocultarSiguiendo = function(){
+    let contenedorSiguiendo = document.getElementById("popup-siguiendo");
+    contenedorSiguiendo.classList.remove("siguiendo-visible");
 }
 
-const mostrarSeguidosActualizados = function() {
+// ---------------------------------DESLOGUEARSE
 
-}
-
-
-
-// DESLOGUEARSE
-
+// Lo que tiene que hacer es perder los datos del login como?????
+//aca tiene que volver a la pagina de login eso ya lo hac eocn el click porque tiene una ruta relativa
 const desloguarse = function(){
 
-     // Lo que tiene que hacer es perder los datos del login como?????
-
-    //aca tiene que volver a la pagina de login eso ya lo hac eocn el click porque tiene una ruta relativa
-   
-
 }
 
+
+//-------------------------------CAMBIAR FONDO
+
+//como accader al javascript porque la imagen esta como imagen de fondo
+// solo si el nivel aparece como numero 
 const cambiarFondo = function(){
+    nivel = actualizarNivel();
+    let cambiarFondoNivel = document.getElementById("fondo");
+
     // aca el fondo va cambiando acaorde a el nivel que hay 
     // nivel${i}.png
 }

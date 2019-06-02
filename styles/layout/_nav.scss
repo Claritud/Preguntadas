@@ -1,0 +1,36 @@
+
+
+.navegador-general {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #fede2c;
+    border-right: 6px solid $border-color;
+
+    .boton-nav {
+        width: 80%;
+        height: auto;
+        margin: 15px 12px 13px 12px;
+        background-color: white; 
+        border: 2px solid $border-color; 
+        box-shadow: 0px 10px 19px 0px #000000bf;
+        cursor: pointer;
+
+        h2 {
+            font-family: $bubble-font;
+            font-size: 22px;
+            color: $border-color;
+            text-shadow: 3px 2px 0 #00000038; 
+            margin: 7px 5px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: $border-color;
+        }
+
+    }
+
+}
+

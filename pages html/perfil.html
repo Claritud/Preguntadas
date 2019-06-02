@@ -17,6 +17,7 @@
             <div id="notificaciones" onclick="mostrarNotificacionesActualizadas()">
                 <i class="fas fa-exclamation-circle"></i>
                 <div class="lista-notificaciones" id="notificaciones-actualizadas">
+                    <h2>Notificaciones!</h2>
                 </div>
             </div>
             <div class="logotipo">
@@ -26,39 +27,81 @@
         </header>
         <!-- ---------------------PERFIL------------------ -->
         <div id="perfil-container">
-            <div class="fondo">
+            <div id="fondo">
                 <div class="columns">
                     <aside class="columna-izquierda">
                         <!-- LOG OUT aca tambien tendria que borrar los datos del login-->
-                        <div class="boton-logout">
-                            <a href="login.html">
-                                <h2>Log Out</h2>
-                            </a>
-                        </div>
+                        <!-- ---------------------NAVEGADOR------------------ -->
+                        <nav class="navegador-general">
+                            <div class="boton-nav">
+                                <a href="login.html">
+                                    <h2>Log Out</h2>
+                                </a>
+                            </div>
+                            <div class="boton-nav">
+                                <a href="../index.html">
+                                    <h2>Home</h2>
+                                </a>
+                            </div>
+                            <div class="boton-nav">
+                                <!-- aca hay que poner la ref a la pagina de crear desafio -->
+                                <a href="">
+                                    <h2>Crear Desafio</h2>
+                                </a>
+                            </div>
+                            <div class="boton-nav">
+                                <!-- aca hay que poner la ref ranking (ya sea popup o lo que sea) -->
+                                <a href="">
+                                    <h2>Ranking</h2>
+                                </a>
+                            </div>
+                            <div class="boton-nav">
+                                <!-- aca hay que poner la ref a estadisticas (ya sea popup o lo que sea) -->
+                                <a href="">
+                                    <h2>Estadisticas</h2>
+                                </a>
+                            </div>
+                            <div class="boton-nav">
+                                <!-- aca hay que poner la ref a preguntas que subi -->
+                                <a href="">
+                                    <h2>Preguntas Subidas</h2>
+                                </a>
+                            </div>
+                        </nav>
                     </aside>
                     <main class="columna-central">
                         <!-- NOMBRE USUARIO/PUNTAJE/NIVEL -->
                         <div class="datos-usuario">
                             <h2 id="nombre-usuario">Alberta</h2>
-                            <img class="img-puntaje-usuario" src="../img/Clara/1024x1024/clean - 6.png" />
+                            <img class="img-puntaje-usuario" src="../img/Clara/1024x1024/5 - dot.png" />
                             <h2 id="puntaje-usuario">124 puntos</h2>
                             <div class="contenedor-nivel">
                                 <h2 id="nivel-usuario">Nivel 1</h2>
                             </div>
                         </div>
-
                     </main>
                     <aside class="columna-derecha">
-                        <!-- SEGUIDORES/SEGUIDOS-->
-                        <div class="burbujas-seguidores">
-                            <div class="numero-seguidores">0</div>
-                            <h3>Te Siguen</h3>
-                            <img class="img-te-siguen" src="../img/Clara/1024x1024/clean - 7.png" />
-                        </div>
-                        <div class="burbujas-seguidos">
-                            <div class="numero-que-sigues">0</div>
-                            <h3>Siguiendo</h3>
-                            <!-- <img class="img-siguiendo" src="../img/Clara/1024x1024/clean - 7.png" /> -->
+                        <div class="contenedor-burbujas">
+                            <!-- SEGUIDORES -->
+                            <div class="burbujas-seguidores" onclick="mostrarSeguidores()">
+                                <div class="numero-seguidores" id="num-seguidores">0</div>
+                                <h3>Te Siguen</h3>
+                                <img class="img-te-siguen" src="../img/Clara/1024x1024/clean - 2.png" />
+                            </div>
+                            <div class="contenedor-seguidores" id="popup-seguidores">
+                                <div class="cerrar" onclick="ocultarSeguidores()">✖️</div>
+                                <h2>Te Siguen</h2>
+                            </div>
+                            <!-- SEGUIDOS -->
+                            <div class="burbujas-siguiendo" onclick="mostrarSiguiendo()">
+                                <div class="numero-que-sigues">0</div>
+                                <h3>Siguiendo</h3>
+                                <img class="img-siguiendo" src="../img/Clara/1024x1024/clean - 2.png" />
+                            </div>
+                            <div class="contenedor-siguiendo" id="popup-siguiendo">
+                                <div class="cerrar" onclick="ocultarSiguiendo()">✖️</div>
+                                <h2>Sigues a </h2>
+                            </div>
                         </div>
                     </aside>
                 </div>
