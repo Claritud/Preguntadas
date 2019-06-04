@@ -351,6 +351,14 @@ template {
   font-family: "badaboom";
   src: url("../../fonts/badaboom_bb/BADABB__.TTF");
 }
+@font-face {
+  font-family: "avenger";
+  src: url("../../fonts/avengeance_mightiest_avenger/AVENGEANCE MIGHTIEST AVENGER.ttf");
+}
+@font-face {
+  font-family: "obelix";
+  src: url("../../fonts/obelixpro/ObelixPro-cyr.ttf");
+}
 /*FONTS*/
 /*FONTS SIZE*/
 /*COLORS*/
@@ -666,6 +674,9 @@ header h1 {
   z-index: 1;
   opacity: 1;
 }
+#notificaciones #notificaciones-actualizadas h2 {
+  font-family: "badaboom";
+}
 #notificaciones .lista-notificaciones {
   display: none;
   visibility: hidden;
@@ -691,7 +702,15 @@ header h1 {
   cursor: pointer;
   transition: 0.5s;
 }
-.navegador-general .boton-nav h2 {
+.navegador-general .boton-nav:hover {
+  background-color: #c052febf;
+  width: 85%;
+}
+.navegador-general .boton-nav a {
+  text-decoration: none;
+  color: none;
+}
+.navegador-general .boton-nav a h2 {
   font-family: "shaka-pow";
   font-size: 22px;
   color: #000000;
@@ -699,16 +718,9 @@ header h1 {
   margin: 7px 5px;
   text-align: center;
 }
-.navegador-general .boton-nav h2:hover {
-  color: wh;
-}
-.navegador-general .boton-nav a {
-  text-decoration: none;
-  color: #000000;
-}
-.navegador-general .boton-nav:hover {
-  background-color: #c052febf;
-  width: 85%;
+.navegador-general .boton-nav a h2:hover {
+  color: white;
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=main.css.map */

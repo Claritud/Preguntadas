@@ -19,6 +19,7 @@ const actualizarNotificaciones = function() {
 }
 
 const mostrarNotificacionesActualizadas = function(){
+    notificaciones = "";
     notificaciones = actualizarNotificaciones();
     let contenedorNotificaciones = document.getElementById("notificaciones-actualizadas");
     contenedorNotificaciones.classList.toggle("lista-notificaciones");
@@ -26,8 +27,27 @@ const mostrarNotificacionesActualizadas = function(){
     for (i=0; i < notificaciones.length; i++) {
         contenedorNotificaciones.innerHTML += ` 💬 ${notificaciones[i]} </br>`;
     }
+    
 }
 
+// ------------------------- INFO USUARIO
+// parametros de nombre de usuario como cantidad de caracteres.
+
+const obtenerInfoUsuaria = function(){
+    let user = {
+        nombre: "Albertu", 
+        email: "alberta@gmail.com",
+        password: "albertita",
+    }
+    return user;
+}
+
+const mostrarInfoUsuaria = function(){
+    let user = obtenerInfoUsuaria();
+    let contenedorNombreUsuaria = document.getElementById("nombre-usuario");
+    contenedorNombreUsuaria.innerHTML = user.nombre;
+}
+mostrarInfoUsuaria();
 
 // ---------------------------NOMBRE USUARIO
 
@@ -74,7 +94,7 @@ const actualizarNivel = function(){
 
   //aca tengo que poner que segun el puntaje que tenga pase de nivel
 }
-console.log(nivel);
+// console.log(nivel);
 // const actualizarNivel = function(){
 //     let niveles = [
 //         "Nivel 1",

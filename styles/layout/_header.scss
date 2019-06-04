@@ -56,9 +56,7 @@ header {
     position: absolute;
     top: 127px;
     left: 7px;
-    
-
-         
+           
     i {
         font-size: 80px;
         color: #fdff70;
@@ -81,7 +79,11 @@ header {
         padding-bottom: 20px;
         z-index: 1;
         opacity: 1;
+        h2 {
+            font-family: $probando-una;
+        }
     }
+
     .lista-notificaciones {
         display: none;
         visibility: hidden;
