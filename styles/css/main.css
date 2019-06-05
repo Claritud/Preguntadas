@@ -517,6 +517,7 @@ body {
   opacity: 0;
   top: 0%;
   transition: 0.5s;
+  visibility: hidden;
 }
 #perfil-container .columns .columna-derecha .contenedor-seguidores .cerrar {
   float: right;

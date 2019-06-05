@@ -15,20 +15,20 @@ const actualizarNotificaciones = function() {
         "Pasaste al nivel Lorem ipsum dolor sit amet consectetur adipisicing elit"
     ]
     return notificaciones;
-
 }
 
 const mostrarNotificacionesActualizadas = function(){
-    notificaciones = "";
     notificaciones = actualizarNotificaciones();
     let contenedorNotificaciones = document.getElementById("notificaciones-actualizadas");
     contenedorNotificaciones.classList.toggle("lista-notificaciones");
 
     for (i=0; i < notificaciones.length; i++) {
+        let notificaciones="";
         contenedorNotificaciones.innerHTML += ` 💬 ${notificaciones[i]} </br>`;
     }
     
 }
+// poner boton para borrar notificaciones
 
 // ------------------------- INFO USUARIO
 // parametros de nombre de usuario como cantidad de caracteres.
@@ -46,6 +46,7 @@ const mostrarInfoUsuaria = function(){
     let user = obtenerInfoUsuaria();
     let contenedorNombreUsuaria = document.getElementById("nombre-usuario");
     contenedorNombreUsuaria.innerHTML = user.nombre;
+
 }
 mostrarInfoUsuaria();
 
@@ -75,8 +76,10 @@ const actualizarPuntaje = function() {
 
 const mostrarPuntajeActualizado = function() {
     puntaje = actualizarPuntaje();
-    //aca faltaria ver donde se muestra
+    let contenedorPuntaje = document.getElementById("puntaje-usuario");
+    contenedorPuntaje.innerHTML = puntaje;
 }
+mostrarPuntajeActualizado();
 
 // -----------------------NIVEL
 // casda vez que termina una pregunta se tiene uqe actualizar el puntaje y el nivel 
@@ -84,16 +87,17 @@ const mostrarPuntajeActualizado = function() {
 let nivel = 0;
 let parametroPuntaje = 100;
 const actualizarNivel = function(){
-    nivel = 1;
-    parametroPuntaje = 100;
+    nivel = 1; 
+    parametroPuntaje = 100; 
     if (puntaje > parametroPuntaje){ 
-        nivel++;
+        nivel++; 
         parametroPuntaje+=100;
     }
    return nivel, parametroPuntaje;
 
   //aca tengo que poner que segun el puntaje que tenga pase de nivel
 }
+
 // console.log(nivel);
 // const actualizarNivel = function(){
 //     let niveles = [
