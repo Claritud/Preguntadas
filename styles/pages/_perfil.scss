@@ -9,7 +9,7 @@ body {
     
     #fondo {
         width: 100%;
-        height: auto;
+        height: 600px;
         background-image: url(../../img/fondosNiveles/nivel1.png);
         background-position: center;
         background-size: cover;
@@ -20,7 +20,7 @@ body {
 
     .columns {
         width: 100%;
-        height: auto;
+        height: 600px;
         display: flex;
         flex-direction: row;
 
@@ -97,11 +97,9 @@ body {
                         text-shadow: 3px 2px 0 #00000038;
                         font-size: 30px;
                     }
-
                 }
                 
             }
-
 
         }
 
@@ -109,7 +107,6 @@ body {
         .columna-derecha {
             display: flex;
             width: 20%;
-            height: 500px;
             padding-left: 20px;
             background-color: white;
             border-left: 6px solid $border-color;
@@ -119,7 +116,6 @@ body {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                height: 500px;
                 background-color: #1cc763;
                 border-left: 6px solid $border-color;
             }

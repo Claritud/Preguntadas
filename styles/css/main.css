@@ -364,6 +364,119 @@ template {
 /*COLORS*/
 /*MEDIA QUERIES*/
 /*PAGES*/
+#home .columna-central {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../img/fondosNiveles/fondoNombrePerfil.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#home .columna-central .contenedor-botones-home {
+  display: flex;
+  width: 90%;
+  height: 50%;
+  background-color: white;
+  border: 5px solid #000000;
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.75);
+}
+#home .columna-central .contenedor-botones-home .contenedor-boton-jugar {
+  width: 36%;
+  height: auto;
+  background-color: #ff2ea1;
+  background-image: url("../../img/globosDialogo/botonjugar.png");
+  background-position: center;
+  background-size: cover;
+  border-right: 4px solid #000000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#home .columna-central .contenedor-botones-home .contenedor-boton-jugar:hover {
+  border: 2px solid #000000;
+  box-shadow: 0px 10px 19px 0px #000000bf;
+  width: 44%;
+}
+#home .columna-central .contenedor-botones-home .contenedor-boton-jugar h2 {
+  font-family: "avenger";
+  font-size: 25px;
+  vertical-align: cen;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 200px;
+  vertical-align: ce;
+  margin: 0;
+}
+#home .columna-central .contenedor-botones-home .contenedor-boton-desafio {
+  width: 32%;
+  height: auto;
+  background-color: #2eceff;
+  background-image: url("../../img/globosDialogo/botondesafio.png");
+  background-position: center;
+  background-size: cover;
+  border-right: 4px solid #000000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#home .columna-central .contenedor-botones-home .contenedor-boton-desafio:hover {
+  border: 2px solid #000000;
+  box-shadow: 0px 10px 19px 0px #000000bf;
+  width: 40%;
+}
+#home .columna-central .contenedor-botones-home .contenedor-boton-desafio h2 {
+  font-family: "avenger";
+  font-size: 25px;
+  vertical-align: cen;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 200px;
+  vertical-align: ce;
+  margin: 0;
+}
+#home .columna-central .contenedor-botones-home .contenedor-boton-competencia {
+  width: 32%;
+  height: auto;
+  background-color: #fff12e;
+  background-image: url("../../img/globosDialogo/botoncompetencia.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#home .columna-central .contenedor-botones-home .contenedor-boton-competencia:hover {
+  border: 2px solid #000000;
+  box-shadow: 0px 10px 19px 0px #000000bf;
+  width: 40%;
+}
+#home .columna-central .contenedor-botones-home .contenedor-boton-competencia h2 {
+  font-family: "avenger";
+  font-size: 25px;
+  vertical-align: cen;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 200px;
+  vertical-align: ce;
+  margin: 0;
+}
+#home .perfil-home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url(../../img/fondosNiveles/nivel1.png);
+  background-position: center;
+  background-size: cover;
+  border-left: 6px solid #000000;
+}
+#home .perfil-home h2 {
+  margin: 0;
+  padding: 40px 10px 1px 10px;
+  font-family: "adventure";
+  font-size: 25px;
+  color: #000000;
+  text-shadow: 10px 5px 0 #93939369;
+}
+
 body {
   margin: 0;
 }
@@ -374,7 +487,7 @@ body {
 }
 #perfil-container #fondo {
   width: 100%;
-  height: auto;
+  height: 600px;
   background-image: url(../../img/fondosNiveles/nivel1.png);
   background-position: center;
   background-size: cover;
@@ -383,7 +496,7 @@ body {
 }
 #perfil-container .columns {
   width: 100%;
-  height: auto;
+  height: 600px;
   display: flex;
   flex-direction: row;
 }
@@ -456,7 +569,6 @@ body {
 #perfil-container .columns .columna-derecha {
   display: flex;
   width: 20%;
-  height: 500px;
   padding-left: 20px;
   background-color: white;
   border-left: 6px solid #000000;
@@ -466,7 +578,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 500px;
   background-color: #1cc763;
   border-left: 6px solid #000000;
 }
@@ -586,6 +697,7 @@ body {
   opacity: 0;
   top: 0%;
   transition: 0.5s;
+  visibility: hidden;
 }
 #perfil-container .columns .columna-derecha .contenedor-siguiendo .cerrar {
   float: right;
@@ -607,7 +719,124 @@ body {
   visibility: visible;
 }
 
+#login #login-container {
+  display: flex;
+}
+#login #login-container #fondo {
+  width: 100%;
+  height: 600px;
+  background-image: url(../../img/fondosNiveles/otro2.png);
+  background-position: center;
+  background-size: cover;
+  margin-top: 20px;
+  border: 5px solid #000000;
+}
+#login #login-container .columns {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+#login #login-container .columna-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+#login #login-container #contenedor-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-image: url(../../img/globosDialogo/login2.png);
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+#login #login-container #contenedor-login .contenedor-input {
+  display: flex;
+  flex-direction: column;
+  line-height: 35px;
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+#login #login-container #contenedor-login .contenedor-usuario {
+  display: flex;
+  flex-direction: column;
+}
+#login #login-container #contenedor-login .contenedor-password {
+  display: flex;
+  flex-direction: column;
+}
+#login #login-container #contenedor-signin {
+  display: flex;
+}
+#login #login-container .visible {
+  display: none;
+}
+
 /*COMPONENTS*/
+.boton-nav {
+  width: 80%;
+  height: auto;
+  margin: 15px 12px 13px 12px;
+  background-color: white;
+  border: 2px solid #000000;
+  box-shadow: 0px 10px 19px 0px #000000bf;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.boton-nav:hover {
+  background-color: #c052febf;
+  width: 85%;
+}
+.boton-nav a {
+  text-decoration: none;
+  color: none;
+}
+.boton-nav a h2 {
+  font-family: "shaka-pow";
+  font-size: 22px;
+  color: #000000;
+  text-shadow: 3px 2px 0 #00000038;
+  margin: 7px 5px;
+  text-align: center;
+}
+.boton-nav a h2:hover {
+  color: white;
+  font-size: 23px;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+}
+
+label {
+  font-family: "obelix";
+  font-size: 20px;
+  padding: 5px;
+}
+
+input .input-usuario {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 10px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-family: "obelix";
+  color: #000000;
+  border: 2px solid #000000;
+  box-shadow: 0px 10px 19px 0px #000000bf;
+}
+
 /*LAYOUT*/
 /*------------HEADER-------------------*/
 header {
@@ -721,7 +950,7 @@ header h1 {
 }
 .navegador-general .boton-nav a h2:hover {
   color: white;
-  font-size: 25px;
+  font-size: 23px;
 }
 
 /*# sourceMappingURL=main.css.map */

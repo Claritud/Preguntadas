@@ -23,7 +23,7 @@ const mostrarNotificacionesActualizadas = function(){
     contenedorNotificaciones.classList.toggle("lista-notificaciones");
 
     for (i=0; i < notificaciones.length; i++) {
-        let notificaciones="";
+        // let notificaciones="";
         contenedorNotificaciones.innerHTML += ` 💬 ${notificaciones[i]} </br>`;
     }
     

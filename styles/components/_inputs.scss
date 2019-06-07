@@ -1,0 +1,31 @@
+
+
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    display: block;  
+}
+label {
+    font-family: $probando-tres;
+    font-size: 20px;
+    padding: 5px;
+}
+
+input {
+    .input-usuario {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 10px;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-family: $probando-tres;
+        color: $border-color;
+        border: 2px solid $border-color;
+        box-shadow: 0px 10px 19px 0px #000000bf;
+
+    }
+    
+}

@@ -1,0 +1,194 @@
+
+#home {
+
+    .columna-central {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // background-color: white;
+        background-image: url(../../img/fondosNiveles/fondoNombrePerfil.jpg);
+        background-position: center;
+        background-size: cover;
+
+        .contenedor-botones-home {
+            display: flex;
+            width: 90%;
+            height: 50%;
+            background-color: white;
+            border: 5px solid $border-color;
+            box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
+            
+            .contenedor-boton-jugar {
+                width: 36%;
+                height: auto;
+                background-color: #ff2ea1;
+                background-image: url("../../img/globosDialogo/botonjugar.png");
+                background-position: center;
+                background-size: cover;
+                border-right: 4px solid $border-color;
+                cursor: pointer;
+                transition: .5s;
+                &:hover {
+                    border: 2px solid $border-color; 
+                    box-shadow: 0px 10px 19px 0px #000000bf;
+                    width: 44%;
+                }
+
+                h2 {
+                    font-family: $probando-dos;
+                    font-size: 25px;
+                    vertical-align: cen;
+                    vertical-align: middle;
+                    text-align: center;
+                    line-height: 200px;
+                    vertical-align: ce;
+                    margin: 0;
+                }
+            }
+
+            .contenedor-boton-desafio {
+                width: 32%;
+                height: auto;
+                background-color: #2eceff;
+                background-image: url("../../img/globosDialogo/botondesafio.png");
+                background-position: center;
+                background-size: cover;
+                border-right: 4px solid $border-color;
+                cursor: pointer;
+                transition: .5s;
+                &:hover {
+                    border: 2px solid $border-color; 
+                    box-shadow: 0px 10px 19px 0px #000000bf;
+                    width: 40%;
+                }
+
+                h2 {
+                    font-family: $probando-dos;
+                    font-size: 25px;
+                    vertical-align: cen;
+                    vertical-align: middle;
+                    text-align: center;
+                    line-height: 200px;
+                    vertical-align: ce;
+                    margin: 0;
+                }
+            }
+
+            .contenedor-boton-competencia {
+                width: 32%;
+                height: auto;
+                background-color: #fff12e;
+                background-image: url("../../img/globosDialogo/botoncompetencia.png");
+                background-position: center;
+                background-size: cover;
+                cursor: pointer;
+                transition: .5s;
+                &:hover {
+                    border: 2px solid $border-color; 
+                    box-shadow: 0px 10px 19px 0px #000000bf;
+                    width: 40%;
+                }
+
+                h2 {
+                    font-family: $probando-dos;
+                    font-size: 25px;
+                    vertical-align: cen;
+                    vertical-align: middle;
+                    text-align: center;
+                    line-height: 200px;
+                    vertical-align: ce;
+                    margin: 0;
+                }
+
+            }
+    
+        }
+
+        
+    }
+
+    .perfil-home{      
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-image: url(../../img/fondosNiveles/nivel1.png);
+        background-position: center;
+        background-size: cover;
+        border-left: 6px solid $border-color;
+
+        h2 {
+            margin: 0;
+            padding: 40px 10px 1px 10px;
+            font-family: $title-font;
+            font-size: 25px;
+            color: $border-color;
+            text-shadow: 10px 5px 0 #93939369;
+        }
+        
+    }
+
+}
+
+// .datos-usuario {
+//     position: relative;
+//     top: -55px;
+//     transform: skewy(-7deg);
+//     box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
+
+//     #nombre-usuario {
+//         margin: 0;
+//         padding: 40px 10px 1px 10px;
+//         font-family: $title-font;
+//         font-size: 120px;
+//         color: $border-color;
+//         background-image: url(../../img/fondosNiveles/fondoNombrePerfil.jpg);
+//         background-position: center;
+//         background-size: cover;
+//         text-shadow: 10px 5px 0 #93939369;
+//         border-bottom: 8px solid $border-color;
+//         border-top: 8px solid $border-color;
+//         border-right: 8px solid $border-color;
+//     }
+
+//     .img-puntaje-usuario {
+//         width: 300px;
+//         height: auto;
+//         position: absolute;
+//         transform: translate(410px, -160px);
+
+//     }
+
+//     #puntaje-usuario {
+//         position: absolute;
+//         font-family: $bubble-font;
+//         font-size: 30px;
+//         color: $border-color;
+//         text-shadow: 3px 3px 0 #0000005e;
+//         transform: translate(374%,-270%);
+//         z-index: 1;
+//     }
+
+//     .contenedor-nivel { // aca es donde esta el numero del nivel
+//         position: absolute;
+//         transform: translateY(-38%);
+//         left: 30%;
+//         width: 160px;
+//         height: 45px;
+//         background-color: white;
+//         border: 2px solid $border-color; 
+//         box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.75);
+
+//         #nivel-usuario {
+//             font-family: $bubble-font;
+//             position: absolute;
+//             margin: 5px;
+//             color: $border-color;
+//             text-shadow: 3px 2px 0 #00000038;
+//             font-size: 30px;
+//         }
+//     }
+    
+// }
+

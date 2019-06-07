@@ -7,11 +7,14 @@
 
 @import 'pages/home';
 @import 'pages/perfil';
+@import 'pages/login';
+@import 'pages/preguntas';
+
 
 
 /*COMPONENTS*/
-
-//@import 'componentes/nav'; iconos banner buttons
+@import 'components/buttons';
+@import 'components/inputs';
 
 
 /*LAYOUT*/
