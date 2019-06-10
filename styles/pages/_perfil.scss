@@ -71,12 +71,14 @@ body {
 
                 #puntaje-usuario {
                     position: absolute;
-                    font-family: $bubble-font;
+                    font-family: "shaka-pow";
                     font-size: 30px;
-                    color: $border-color;
+                    color: #000000;
                     text-shadow: 3px 3px 0 #0000005e;
-                    transform: translate(374%,-270%);
+                    transform: translate(-50%, -50%);
                     z-index: 1;
+                    top: 60%;
+                    left: 60%;
                 }
 
                 .contenedor-nivel { // aca es donde esta el numero del nivel

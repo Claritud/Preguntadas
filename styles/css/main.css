@@ -462,19 +462,89 @@ template {
 #home .perfil-home {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   background-image: url(../../img/fondosNiveles/nivel1.png);
   background-position: center;
   background-size: cover;
   border-left: 6px solid #000000;
 }
-#home .perfil-home h2 {
+#home .perfil-home .contenedor-avatar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 240px;
+}
+#home .perfil-home .contenedor-avatar #avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-image: url(../../img/avatares/mia.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 2px solid #000000;
+  box-shadow: 0px 10px 19px 0px #000000bf;
+}
+#home .perfil-home .datos-usuario {
+  width: 100%;
+  text-align: center;
+  transform: skewy(-7deg);
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.75);
+}
+#home .perfil-home .datos-usuario #nombre-usuario {
   margin: 0;
-  padding: 40px 10px 1px 10px;
+  width: 85%;
+  padding: 12px;
+  font-family: "adventure";
+  font-size: 30px;
+  color: #000000;
+  background-image: url(../../img/fondosNiveles/fondoNombrePerfil.jpg);
+  background-position: center;
+  background-size: cover;
+  text-shadow: 10px 5px 0 #93939369;
+  border: 8px solid #000000;
+}
+#home .perfil-home .datos-usuario .contenedor-nivel {
+  position: absolute;
+  transform: translateY(-38%);
+  left: 30%;
+  width: 160px;
+  height: 45px;
+  background-color: white;
+  border: 2px solid #000000;
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.75);
+}
+#home .perfil-home .datos-usuario .contenedor-nivel #nivel-usuario {
+  font-family: "shaka-pow";
+  margin: 5px;
+  color: #000000;
+  text-shadow: 3px 2px 0 #00000038;
+  font-size: 30px;
+}
+#home .perfil-home .datos-usuario h2 {
+  margin: 0;
+  padding: 2px;
   font-family: "adventure";
   font-size: 25px;
   color: #000000;
   text-shadow: 10px 5px 0 #93939369;
+}
+#home .perfil-home .datos-usuario .img-puntaje-usuario {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  transform: translate(410px, -160px);
+}
+#home .perfil-home .datos-usuario #puntaje-usuario {
+  position: absolute;
+  font-family: "shaka-pow";
+  font-size: 30px;
+  color: #000000;
+  text-shadow: 3px 3px 0 #0000005e;
+  transform: translate(374%, -270%);
+  z-index: 1;
 }
 
 body {
@@ -545,8 +615,10 @@ body {
   font-size: 30px;
   color: #000000;
   text-shadow: 3px 3px 0 #0000005e;
-  transform: translate(374%, -270%);
+  transform: translate(-50%, -50%);
   z-index: 1;
+  top: 60%;
+  left: 60%;
 }
 #perfil-container .columns .columna-central .datos-usuario .contenedor-nivel {
   position: absolute;
@@ -748,7 +820,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  line-height: 30px;
+  width: 55%;
   height: 100%;
   background-image: url(../../img/globosDialogo/login2.png);
   background-position: center;
@@ -758,6 +831,8 @@ body {
 #login #login-container #contenedor-login .contenedor-input {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   line-height: 35px;
   position: absolute;
   top: 45%;
@@ -767,10 +842,72 @@ body {
 #login #login-container #contenedor-login .contenedor-usuario {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#login #login-container #contenedor-login .contenedor-usuario input {
+  height: 30px;
+  width: 80%;
+  font-size: 20px;
 }
 #login #login-container #contenedor-login .contenedor-password {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#login #login-container #contenedor-login .contenedor-password input {
+  height: 30px;
+  width: 80%;
+  font-size: 20px;
+}
+#login #login-container #contenedor-login a {
+  font-family: "obelix";
+  font-size: 10px;
+  cursor: pointer;
+}
+#login #login-container #contenedor-login .boton-login {
+  width: 60%;
+  height: 30px;
+  margin: 15px 12px 13px 12px;
+  background-color: #fede2c;
+  color: #000000;
+  border: 0px solid #000000;
+  box-shadow: 0px 10px 19px 0px #000000bf;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#login #login-container #contenedor-login .boton-login:hover {
+  background-color: #c052febf;
+  width: 70%;
+}
+#login #login-container #contenedor-login .boton-login a {
+  text-decoration: none;
+  color: none;
+}
+#login #login-container #contenedor-login .boton-login a button {
+  font-family: "shaka-pow";
+  font-size: 22px;
+  color: #000000;
+  text-shadow: 3px 2px 0 #00000038;
+  margin: 7px 5px;
+  text-align: center;
+}
+#login #login-container #contenedor-login .boton-login a button:hover {
+  color: white;
+  font-size: 23px;
+}
+#login #login-container #abre-sigin {
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#login #login-container #abre-sigin:hover {
+  border-bottom: 2px solid #c052febf;
+  color: #c052febf;
+}
+#login #login-container #abre-sigin .fas {
+  font-size: 25px;
 }
 #login #login-container #contenedor-signin {
   display: flex;

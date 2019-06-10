@@ -8,58 +8,74 @@
 //ver is hago tipo notificcacionesAnteriores !== nuevasNotificaciones o algo asi
 
 const actualizarNotificaciones = function() { 
-    let notificaciones = [
-        "Te sigue Lorem ipsum dolor sit amet consectetur adipisicing elit",
-        "Invitacion a Lorem ipsum dolor sit amet consectetur adipisicing elit",
-        "Tu puesto en el ranking Lorem ipsum dolor sit amet consectetur adipisicing elit",
-        "Pasaste al nivel Lorem ipsum dolor sit amet consectetur adipisicing elit"
-    ]
-    return notificaciones;
+    
+    fetch("https://preguntadas.herokuapp.com/v1/notifications", {
+        headers: {
+            "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNsYXJhIiwiaWF0IjoxNTU5ODMzMjc0fQ.68TBTq9gv2iQVtrfs4sZ_kvYCfiTeBew6NsV8mzrRZA"
+        },
+        method: "get",
+   }).then(function(result) {
+        return result.json();
+   }).then(function(result) {
+
+       mostrarNotificacionesActualizadas(result.notifications);
+   
+   }).catch(function(error) {
+   
+   });
 }
 
-const mostrarNotificacionesActualizadas = function(){
-    notificaciones = actualizarNotificaciones();
+
+const mostrarNotificacionesActualizadas = function(notificaciones){
     let contenedorNotificaciones = document.getElementById("notificaciones-actualizadas");
     contenedorNotificaciones.classList.toggle("lista-notificaciones");
 
-    for (i=0; i < notificaciones.length; i++) {
-        // let notificaciones="";
-        contenedorNotificaciones.innerHTML += ` 💬 ${notificaciones[i]} </br>`;
-    }
-    
+    if (notificaciones.length >= 0){
+
+        for (i=0; i < notificaciones.length; i++) {
+            contenedorNotificaciones.innerHTML += ` 💬 ${notificaciones[i]} </br>`;
+        }
+
+    } else {
+        contenedorNotificaciones.innerHTML = ` 💬 No tiene notificaciones nuevas`;
+    }  
 }
+
+
 // poner boton para borrar notificaciones
 
 // ------------------------- INFO USUARIO
 // parametros de nombre de usuario como cantidad de caracteres.
 
 const obtenerInfoUsuaria = function(){
-    let user = {
-        nombre: "Albertu", 
-        email: "alberta@gmail.com",
-        password: "albertita",
-    }
-    return user;
-}
 
-const mostrarInfoUsuaria = function(){
-    let user = obtenerInfoUsuaria();
+    fetch("https://preguntadas.herokuapp.com/v1/users/ada", {
+        headers: {
+            "Authorization": "eyJpc3MiOiJ0b3B0YWwuY29tIiwiZXhwIjoxNDI2NDIwODAwLCJodHRwOi8vdG9wdGFsLmNvbS9qd3RfY2xhaW1zL2lzX2FkbWluIjp0cnVlLCJjb21wYW55IjoiVG9wdGFsIiwiYXdlc29tZSI6dHJ1ZX0"
+        },
+        method: "get"
+   }).then(function(result) {
+        return result.json();
+   }).then(function(result) { 
+        
+        mostrarInfoUsuaria(result.user.username);
+
+        // let contenedorNombreUsuaria = document.getElementById("nombre-usuario");
+        // contenedorNombreUsuaria.innerHTML = result.user.username;
+    
+   }).catch(function(error) {
+   
+   });
+
+}
+// obtenerInfoUsuaria();
+
+const mostrarInfoUsuaria = function(nombreUsuario){
     let contenedorNombreUsuaria = document.getElementById("nombre-usuario");
-    contenedorNombreUsuaria.innerHTML = user.nombre;
+    contenedorNombreUsuaria.innerHTML = nombreUsuario;
 
 }
-mostrarInfoUsuaria();
-
-// ---------------------------NOMBRE USUARIO
-
-const nombreUsuario = function() {
-    //obtenido del login
-
-}
-
-const mostrarNombreUsuario = function() {
-
-}
+obtenerInfoUsuaria();
 
 
 

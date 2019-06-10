@@ -29,15 +29,20 @@
                             <div class="contenedor-input">
                                 <form class="contenedor-usuario">
                                     <label for="input-usuario">Ingrese Usuario</label>
-                                    <input required type="text" id="input-usuario" placeholder="usuario" />
+                                    <input required type="text" id="input-usuario" value=""
+                                    onchange="usuario" maxlength="10"/>
                                 </form>
                                 <form class="contenedor-password">
                                     <label for="input-password">Ingrese Password</label>
-                                    <input required type="text" id="input-password" placeholder="password" />
+                                    <input required type="password" type="text" id="input-password" value=""
+                                    onchange="password" maxlength="10" />
                                 </form>
                                 <button type="button" class="boton-login">
-                                    Ingresar<a href="../index.html"></a>
+                                   <a href="../index.html">Ingresar</a>
                                 </button>
+                                <a id="abre-sigin">aun no te registraste? hace click aca 
+                                    <i class="fas fa-hand-point-left"></i>
+                                </a>
                             </div>
                         </div>
                             <!-- ---------------------SIGIN------------------ -->
