@@ -532,18 +532,18 @@ template {
   text-shadow: 10px 5px 0 #93939369;
 }
 #home .perfil-home .datos-usuario .img-puntaje-usuario {
-  width: 300px;
+  width: 240px;
   height: auto;
   position: absolute;
-  transform: translate(410px, -160px);
+  transform: translate(-50%, 12%);
 }
 #home .perfil-home .datos-usuario #puntaje-usuario {
   position: absolute;
   font-family: "shaka-pow";
-  font-size: 30px;
+  font-size: 20px;
   color: #000000;
   text-shadow: 3px 3px 0 #0000005e;
-  transform: translate(374%, -270%);
+  transform: translate(90%, 400%);
   z-index: 1;
 }
 
@@ -910,12 +910,99 @@ body {
   font-size: 25px;
 }
 #login #login-container #contenedor-signin {
-  display: flex;
-}
-#login #login-container .visible {
   display: none;
 }
+#login #login-container .visible {
+  display: flex;
+}
 
+.perfil-preguntas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-image: url(../../img/fondosNiveles/nivel1.png);
+  background-position: center;
+  background-size: cover;
+  border-left: 6px solid #000000;
+}
+.perfil-preguntas .contenedor-avatar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 240px;
+}
+.perfil-preguntas .contenedor-avatar #avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-image: url(../../img/avatares/mia.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 2px solid #000000;
+  box-shadow: 0px 10px 19px 0px #000000bf;
+}
+.perfil-preguntas .datos-usuario {
+  width: 100%;
+  text-align: center;
+  transform: skewy(-7deg);
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.75);
+}
+.perfil-preguntas .datos-usuario #nombre-usuario {
+  margin: 0;
+  width: 85%;
+  padding: 12px;
+  font-family: "adventure";
+  font-size: 30px;
+  color: #000000;
+  background-image: url(../../img/fondosNiveles/fondoNombrePerfil.jpg);
+  background-position: center;
+  background-size: cover;
+  text-shadow: 10px 5px 0 #93939369;
+  border: 8px solid #000000;
+}
+.perfil-preguntas .datos-usuario .contenedor-nivel {
+  position: absolute;
+  transform: translateY(-38%);
+  left: 30%;
+  width: 160px;
+  height: 45px;
+  background-color: white;
+  border: 2px solid #000000;
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.75);
+}
+.perfil-preguntas .datos-usuario .contenedor-nivel #nivel-usuario {
+  font-family: "shaka-pow";
+  margin: 5px;
+  color: #000000;
+  text-shadow: 3px 2px 0 #00000038;
+  font-size: 30px;
+}
+.perfil-preguntas .datos-usuario h2 {
+  margin: 0;
+  padding: 2px;
+  font-family: "adventure";
+  font-size: 25px;
+  color: #000000;
+  text-shadow: 10px 5px 0 #93939369;
+}
+.perfil-preguntas .datos-usuario .img-puntaje-usuario {
+  width: 240px;
+  height: auto;
+  position: absolute;
+  transform: translate(-50%, 12%);
+}
+.perfil-preguntas .datos-usuario #puntaje-usuario {
+  position: absolute;
+  font-family: "shaka-pow";
+  font-size: 20px;
+  color: #000000;
+  text-shadow: 3px 3px 0 #0000005e;
+  transform: translate(90%, 400%);
+  z-index: 1;
+}
 /*COMPONENTS*/
 .boton-nav {
   width: 80%;

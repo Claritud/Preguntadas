@@ -64,6 +64,7 @@
                     width: 80%;
                     font-size: 20px;
                 }
+
             }
 
             .contenedor-password {
@@ -138,12 +139,12 @@
         }
 
         #contenedor-signin {
-            display: flex;
+            display: none;
        
         }
 
         .visible {
-            display: none;
+            display: flex;
         }
 
     }

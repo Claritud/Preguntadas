@@ -190,20 +190,21 @@
                 }
 
             .img-puntaje-usuario {
-                width: 300px;
+                width: 240px;
                 height: auto;
                 position: absolute;
-                transform: translate(410px, -160px);
+                transform: translate(-50%, 12%);
             }
     
             #puntaje-usuario {
                 position: absolute;
                 font-family: $bubble-font;
-                font-size: 30px;
+                font-size: 20px;
                 color: $border-color;
                 text-shadow: 3px 3px 0 #0000005e;
-                transform: translate(374%,-270%);
+                transform: translate(90%, 400%);
                 z-index: 1;
+
             }
 
         }
